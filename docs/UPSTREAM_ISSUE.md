@@ -23,5 +23,5 @@ for a drafted pawn, check carried weapons; if one reaches, offer the order and
 swap before the attack job (respecting forced-weapon settings).
 
 I've published a standalone interim fix
-(https://github.com/eebette/Better-Attack-Orders-for-Simple-Sidearms, MIT) and
+(https://github.com/Sifu-Hotman/Better-Attack-Orders-for-Simple-Sidearms, MIT) and
 would be happy to retire it if this lands upstream in any form.

@@ -90,5 +90,5 @@ range but within sidearm's; assert the order is issuable and the pawn swaps and
 fires. Must ALSO pass with vanilla-only modlist (Harmony + SS + this) - that's
 the point.
 
-- packageId: `eebette.BetterAttackOrders`
+- packageId: `SifuHotman.BetterAttackOrders`
 - RimWorld 1.6. MIT license.

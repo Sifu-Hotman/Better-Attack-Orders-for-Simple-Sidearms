@@ -15,7 +15,7 @@ namespace BetterAttackOrders
     [StaticConstructorOnStartup]
     public static class Bootstrap
     {
-        public const string HarmonyId = "eebette.BetterAttackOrders";
+        public const string HarmonyId = "SifuHotman.BetterAttackOrders";
 
         static Bootstrap()
         {
