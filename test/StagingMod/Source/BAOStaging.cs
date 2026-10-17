@@ -266,11 +266,7 @@ namespace BAOTestStaging
                     Finish();
                     return;
                 }
-                IntVec3 cell = (rangey.Position + new IntVec3(park, 0, 0)).ClampInsideMap(rangey.Map);
-                if (!cell.Standable(rangey.Map))
-                {
-                    CellFinder.TryFindRandomCellNear(cell, rangey.Map, 8, c => c.Standable(rangey.Map), out cell);
-                }
+                IntVec3 cell = ParkCell(rangey, park);
                 raider.Position = cell;
                 raider.Notify_Teleported();
 
@@ -278,7 +274,7 @@ namespace BAOTestStaging
                 Verb equipped = rangey.equipment.PrimaryEq?.PrimaryVerb;
                 bool pistolBlocked = equipped != null && !equipped.CanHitTarget(raider);
                 Check("scenario-is-the-deadlock", pistolBlocked,
-                    $"dist={distance:F1} equippedRange={equipped?.verbProps?.range:F1} rifleRange={rifleRange:F1} canHit={!pistolBlocked}");
+                    $"dist={distance:F1} equippedRange={equipped?.verbProps?.range:F1} rifleRange={rifleRange:F1} canHit={!pistolBlocked} los={GenSight.LineOfSight(rangey.Position, raider.Position, rangey.Map, skipFirstCell: true)}");
 
                 rangey.drafter.Drafted = true; // the order API requires draft
                 orderAction = FloatMenuUtility.GetRangedAttackAction(rangey, new LocalTargetInfo(raider), out string failStr);
@@ -342,6 +338,28 @@ namespace BAOTestStaging
 
         /// <summary>Normalize: revolver equipped, rifle carried, raider parked
         /// between the two ranges. Returns false (and finishes) on setup failure.</summary>
+        /// <summary>Standable cell `dist` from the pawn with clear line of sight.</summary>
+        // quicktest map gen drops ruins/rock on the x axis; blocked sight fails WithinWindow too
+        private static IntVec3 ParkCell(Pawn pawn, int dist)
+        {
+            Map map = pawn.Map;
+            foreach (IntVec3 dir in GenAdj.CardinalDirections)
+            {
+                IntVec3 c = pawn.Position + dir * dist;
+                if (c.InBounds(map) && c.Standable(map)
+                    && GenSight.LineOfSight(pawn.Position, c, map, skipFirstCell: true))
+                {
+                    return c;
+                }
+            }
+            IntVec3 cell = (pawn.Position + new IntVec3(dist, 0, 0)).ClampInsideMap(map);
+            if (!cell.Standable(map))
+            {
+                CellFinder.TryFindRandomCellNear(cell, map, 8, x => x.Standable(map), out cell);
+            }
+            return cell;
+        }
+
         private IntVec3 parkCell = IntVec3.Invalid;
 
         private bool ConstructDeadlock(out float rifleRange, bool parkAtRifleEdge = false)
@@ -383,11 +401,7 @@ namespace BAOTestStaging
                 Check("setup", false, $"degenerate ranges: equipped={equippedRange:F1} rifle={rifleRange:F1} park={park}");
                 return false;
             }
-            IntVec3 cell = (rangey.Position + new IntVec3(park, 0, 0)).ClampInsideMap(rangey.Map);
-            if (!cell.Standable(rangey.Map))
-            {
-                CellFinder.TryFindRandomCellNear(cell, rangey.Map, 8, c => c.Standable(rangey.Map), out cell);
-            }
+            IntVec3 cell = ParkCell(rangey, park);
             parkCell = cell;
             raider.Position = cell;
             raider.Notify_Teleported();
@@ -521,11 +535,7 @@ namespace BAOTestStaging
                     Finish();
                     return;
                 }
-                IntVec3 cell = (rangey.Position + new IntVec3(park, 0, 0)).ClampInsideMap(rangey.Map);
-                if (!cell.Standable(rangey.Map))
-                {
-                    CellFinder.TryFindRandomCellNear(cell, rangey.Map, 8, c => c.Standable(rangey.Map), out cell);
-                }
+                IntVec3 cell = ParkCell(rangey, park);
                 parkCell = cell;
                 raider.Position = cell;
                 raider.Notify_Teleported();
