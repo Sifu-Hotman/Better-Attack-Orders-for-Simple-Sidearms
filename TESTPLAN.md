@@ -117,8 +117,8 @@ gap closed (L4), one edge accepted rather than mirrored (M7).**
   + a venerate/protect-animal precept + an out-of-range protected animal + a
   player click) and recoverable (a mood hit, no corruption). A clean fix would
   need to re-invoke vanilla with a reaching weapon (invasive) or transpile its
-  range check (bigger architecture change) - deferred; candidate for the upstream
-  issue draft. See [[rule-no-upstream-code-reuse]].
+  range check (bigger architecture change) - deferred. See
+  [[rule-no-upstream-code-reuse]].
 - **L4 (M6 completeness) - FIXED.** the order's click closure calls
   `equipSpecificWeaponFromInventory` OUTSIDE PostfixInner's try (it runs later, on
   click), so an SS rename of that one method would throw uncaught at click. The

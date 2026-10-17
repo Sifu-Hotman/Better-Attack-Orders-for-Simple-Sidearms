@@ -5,8 +5,7 @@ product page.)
 
 **Status: BUILT and machine-verified 2026-08-18** - single Harmony postfix on
 `FloatMenuUtility.GetRangedAttackAction`, green end-to-end pass on a
-vanilla-only modlist (see TESTPLAN.md). Remaining: owner feel-pass, upstream
-issue filing (draft in `docs/UPSTREAM_ISSUE.md`), demo GIF, publish.
+vanilla-only modlist (see TESTPLAN.md). Remaining: owner feel-pass, demo GIF, publish.
 
 ## Objective
 
@@ -36,10 +35,9 @@ choosing wrong.
   test: the deadlock exists in **pure vanilla SS** - no Combat Extended
   involvement - so it is a standalone SS fix, not suite scope. History and the
   original spec live in the Tactics repo's README (feature 2).
-- **Upstream first**: file a single-topic issue on
-  https://github.com/PeteTimesSix/SimpleSidearms with the repro before/alongside
-  building (SS is in maintenance mode; expect no reply, but intent goes on
-  record). If SS ever fixes it upstream, this mod retires.
+- **Mod feature, not an upstream bug report** (owner, 2026-10-17): no SS issue
+  is filed; the behaviour ships as this mod's feature. SS is in maintenance mode
+  (last commit 2025-08-13). No retirement condition.
 - Discovered during CE playtesting of the suite (CE's larger range spreads make
   the deadlock constant), but the fix itself must not reference CE.
 
