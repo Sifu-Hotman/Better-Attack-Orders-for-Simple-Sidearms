@@ -8,7 +8,6 @@
 RimWorld mod that extends a pawn's target scanning to consider targets within
 its [Simple Sidearms](https://github.com/PeteTimesSix/SimpleSidearms) sidearms' ranges.
 
-<!-- DEMO GIF: out-of-range order swaps to the rifle and fires (Media/, at publish) -->
 
 ## Features
 
