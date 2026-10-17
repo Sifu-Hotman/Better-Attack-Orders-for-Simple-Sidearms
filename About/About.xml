@@ -28,11 +28,17 @@ Harmony, then Simple Sidearms, then this mod.
 [tr][td][url=https://github.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Tactics][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_Tactics.png[/img][/url][/td][td]Sensible tweaks to nonsense pawn behavior when CE + SS run together.[/td][/tr]
 [/table]
 
-[b]Standalone[/b] - none of these need the patch, or each other.
+[b]Expanded Materials patches[/b]
+[table]
+[tr][th]Mod[/th][th]What it does[/th][/tr]
+[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3820650181][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_MMP.png[/img][/url][/td][td]Extends [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3333419387]Expanded Materials - Metals[/url] to support additional mods.[/td][/tr]
+[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3820640496][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_MMMas.png[/img][/url][/td][td]Extends [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3662913084]Expanded Materials - Masonry[/url] to support additional mods.[/td][/tr]
+[/table]
+
+[b]Standalone[/b]
 [table]
 [tr][th]Mod[/th][th]What it does[/th][/tr]
 [tr][td][url=https://github.com/Sifu-Hotman/Pawns-Optimize-Weapon-Quality][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_POWQ.png[/img][/url][/td][td]Pawns upgrade their held guns when a higher-quality copy is available.[/td][/tr]
-[tr][td][url=https://github.com/Sifu-Hotman/Universal-Patch-for-More-Materials][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_UPMM.png[/img][/url][/td][td]Adds materials from [url=https://steamcommunity.com/sharedfiles/filedetails/?id=3055040889]More Materials[/url] to non-vanilla recipes.[/td][/tr]
 [/table]
 
 [h1]FAQ[/h1]
@@ -46,7 +52,7 @@ Yep.
 It simplifies and automates aspects of combat weapon management.
 
 [b]AI?[/b]
-This mod was engineered with the help of an AI Coding Assistant (Claude Code, Fable 5, Max effort). The amount of researching and deep-diving the compatibility interfaces of the mods it patches would have been insurmountable without it.
+This mod was engineered with the help of an AI Coding Assistant (Claude Code, Fable 5, Max effort).
 
 Development followed a standard process driven and scrutinized by me (the real human person writing this): explore, design, build, test, fix, review, scrutinize, test again over many rounds.
 

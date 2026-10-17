@@ -16,7 +16,7 @@ cannot be ordered to attack a target between the two ranges:
    swap via the gizmo first.
 
 Reproduces in vanilla + Harmony + Simple Sidearms only (no other mods).
-RimWorld 1.6, SS <version>.
+RimWorld 1.6.4871, Simple Sidearms 1.4.6.0 (v1.6 assembly, Workshop build 2025-08-13).
 
 Suggested shape: when `FloatMenuUtility.GetRangedAttackAction` fails on range
 for a drafted pawn, check carried weapons; if one reaches, offer the order and
