@@ -51,7 +51,9 @@ choosing wrong.
 - Swap only on an explicit player attack order - this changes when a pawn *can be
   ordered*, never who it targets (no target choice, no autonomous behavior).
 - Respect SS state: forced-weapon settings, skip flags (manual-use/EMP/dangerous
-  filtering) via SS's own selection call - never reimplement its filters.
+  filtering) via SS's own selection call - never reimplement its filters. The
+  idle switch also obeys SS's ranged auto-switch toggle, and every swap asks
+  SS's fumble rule (`MiscUtils.shouldDrop`, Combat mode).
 - Licensing: SS has NO published license - behavioral reference only, never copy
   its code. This mod is MIT.
 

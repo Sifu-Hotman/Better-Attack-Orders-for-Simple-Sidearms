@@ -42,7 +42,9 @@ namespace BetterAttackOrders
         [MethodImpl(MethodImplOptions.NoInlining)]
         private static void PostfixInner(JobDriver_Wait __instance)
         {
-            if (!BAOMod.Settings.autoSwitchWhenIdle)
+            // SS's own ranged auto-switch toggle gates this one too
+            if (!BAOMod.Settings.autoSwitchWhenIdle
+                || !PeteTimesSix.SimpleSidearms.SimpleSidearms.Settings.RangedCombatAutoSwitch)
             {
                 return;
             }
@@ -115,7 +117,9 @@ namespace BetterAttackOrders
             {
                 FirstDrawnDef = winner.def;
             }
-            WeaponAssingment.equipSpecificWeaponFromInventory(pawn, winner, dropCurrent: false, intentionalDrop: false);
+            WeaponAssingment.equipSpecificWeaponFromInventory(pawn, winner,
+                dropCurrent: MiscUtils.shouldDrop(pawn, Enums.DroppingModeEnum.Combat, ignoreRecoveryChance: false),
+                intentionalDrop: false);
             // Next CheckForAutoAttack tick engages with the new verb naturally.
         }
     }
