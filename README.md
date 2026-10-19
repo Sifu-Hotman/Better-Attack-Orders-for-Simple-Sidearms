@@ -1,7 +1,7 @@
 # Better Attack Orders for Simple Sidearms
 
 [![Latest Release](https://img.shields.io/github/v/release/Sifu-Hotman/Better-Attack-Orders-for-Simple-Sidearms?label=Latest%20Release)](https://github.com/Sifu-Hotman/Better-Attack-Orders-for-Simple-Sidearms/releases)
-<!-- Steam Workshop badge goes here at publish -->
+[![Steam Workshop](https://img.shields.io/steam/subscriptions/3822791071?label=Steam%20Workshop&logo=steam)](https://steamcommunity.com/sharedfiles/filedetails/?id=3822791071)
 
 ![Better Attack Orders for Simple Sidearms](Media/Badge_BAO.png)
 
