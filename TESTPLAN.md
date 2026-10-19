@@ -10,7 +10,11 @@ mod's claim):
 ./test/run-bao-assert.sh bao2    # the idle auto-switch
 ```
 
-Results: `test/SaveData/test-results-bao*.json`. Green passes recorded 2026-08-18:
+Results: `test/SaveData/test-results-bao*.json`. Latest green: **2026-10-17, 4/4** on
+RimWorld 1.6.4871 rev600, Simple Sidearms 1.4.6.0 (Workshop build 2025-08-13), Harmony
+mod current. First run that day failed bao1-3 for a map reason: quicktest gen put ruins
+walls on the park row, `GenSight.LineOfSight` false, rescue declined; park cell is now
+chosen with clear line of sight (`ParkCell`). Green passes recorded 2026-08-18:
 
 - **scenario-is-the-deadlock**: runner CONSTRUCTS the precondition (revolver
   25.9 in hand, bolt-action 36.9 in inventory - SS may have re-equipped on
@@ -117,8 +121,8 @@ gap closed (L4), one edge accepted rather than mirrored (M7).**
   + a venerate/protect-animal precept + an out-of-range protected animal + a
   player click) and recoverable (a mood hit, no corruption). A clean fix would
   need to re-invoke vanilla with a reaching weapon (invasive) or transpile its
-  range check (bigger architecture change) - deferred; candidate for the upstream
-  issue draft. See [[rule-no-upstream-code-reuse]].
+  range check (bigger architecture change) - deferred. See
+  [[rule-no-upstream-code-reuse]].
 - **L4 (M6 completeness) - FIXED.** the order's click closure calls
   `equipSpecificWeaponFromInventory` OUTSIDE PostfixInner's try (it runs later, on
   click), so an SS rename of that one method would throw uncaught at click. The
