@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""BAO badge + Workshop preview.
+"""BAO badge.
 
 Same geometry system as the CE+SS suite badges (300x100 circle + full-width bar
-+ ring knockout; 1280x720 preview) so the family reads as one set. Identity: VIOLET
++ ring knockout) so the family reads as one set. Identity: VIOLET
 accent - deliberately far from teal (Pawns Optimize Weapon Quality), amber (Loadouts), olive
 (Patch) and red (Tactics); steel blue was tried first and read as a washed-out
 teal. Art is self-drawn pistols, never CE-derived: this is a Simple Sidearms
@@ -75,37 +75,5 @@ def render_badge():
     print("wrote Badge_BAO.png")
 
 
-def render_preview():
-    """1280x720 About/Preview.png: RimWorld's default preview ratio is 16:9
-    (640x360; 1280x720 for high-res art), Workshop rejects previews over 1 MB."""
-    P = 2
-    W, H = 1280 * P, 720 * P
-    img = Image.new("RGBA", (W, H), (12, 12, 12, 255))
-    d = ImageDraw.Draw(img)
-    cx, cy, r = 300 * P, 360 * P, 250 * P
-    d.ellipse([cx - r, cy - r, cx + r, cy + r], fill=BLACK, outline=VIOLET, width=14 * P)
-
-    # the deadlock pair: one in hand (big), one waiting (small) - clearly separated
-    pistol(d, 139 * P, 189 * P, 5.36 * P)
-    pistol(d, 200 * P, 421 * P, 3.3 * P, flip=True)
-
-    def fitp(texts, max_size, max_w):
-        s = int(max_size)
-        while s > 10 and max(d.textlength(t, font=ImageFont.truetype(FONT, s)) for t in texts) > max_w:
-            s -= 1
-        return ImageFont.truetype(FONT, s)
-    line1, line2 = "BETTER ATTACK ORDERS", "FOR SIMPLE SIDEARMS"
-    ftitle = fitp([line1, line2], 84 * P, 620 * P)
-    plh = sum(ftitle.getmetrics())
-    CX = 920 * P
-    ytop = cy - plh
-    for text, y, color in [(line1, ytop, WHITE), (line2, ytop + plh, VIOLET)]:
-        w = d.textlength(text, font=ftitle)
-        d.text((CX - w / 2, y), text, font=ftitle, fill=color)
-    img.convert("RGB").resize((1280, 720), Image.LANCZOS).save(os.path.join(HERE, "..", "About", "Preview.png"), optimize=True)
-    print("wrote About/Preview.png")
-
-
 if __name__ == "__main__":
     render_badge()
-    render_preview()
