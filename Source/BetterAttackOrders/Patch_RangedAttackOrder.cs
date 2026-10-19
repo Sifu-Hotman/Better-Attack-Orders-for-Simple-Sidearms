@@ -123,7 +123,9 @@ namespace BetterAttackOrders
                     // Re-validate at CLICK time.
                     if (RescueLogic.WouldRescue(pawn, target, out ThingWithComps freshWinner))
                     {
-                        WeaponAssingment.equipSpecificWeaponFromInventory(pawn, freshWinner, dropCurrent: false, intentionalDrop: false);
+                        WeaponAssingment.equipSpecificWeaponFromInventory(pawn, freshWinner,
+                            dropCurrent: MiscUtils.shouldDrop(pawn, Enums.DroppingModeEnum.Combat, ignoreRecoveryChance: false),
+                            intentionalDrop: false);
                     }
                 }
                 catch (Exception e)

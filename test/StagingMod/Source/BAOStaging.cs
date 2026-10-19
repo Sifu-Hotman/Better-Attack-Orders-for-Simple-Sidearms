@@ -457,13 +457,37 @@ namespace BAOTestStaging
                 if (tick - startTick > 1800)
                 {
                     Check("off-stays-idle", true, $"held revolver, idle for 1800 ticks");
+                    // SS's own toggle off, ours on: must still stay idle
                     BetterAttackOrders.BAOMod.Settings.autoSwitchWhenIdle = true;
+                    PeteTimesSix.SimpleSidearms.SimpleSidearms.Settings.RangedCombatAutoSwitch = false;
                     phase = 2;
                     startTick = tick;
                 }
                 return;
             }
             if (phase == 2)
+            {
+                KeepRaiderParked();
+                bool swapped = rangey.equipment.Primary?.def?.defName == "Gun_BoltActionRifle";
+                bool attacking = rangey.CurJobDef == JobDefOf.AttackStatic || rangey.stances.curStance is Stance_Warmup;
+                if (swapped || attacking)
+                {
+                    Check("ss-off-stays-idle", false,
+                        $"acted with SS toggle OFF: primary={rangey.equipment.Primary?.def?.defName} job={rangey.CurJobDef?.defName} patchSwaps={BetterAttackOrders.JobDriver_Wait_CheckForAutoAttack_Patch.SwapCount}");
+                    PeteTimesSix.SimpleSidearms.SimpleSidearms.Settings.RangedCombatAutoSwitch = true;
+                    Finish();
+                    return;
+                }
+                if (tick - startTick > 1800)
+                {
+                    Check("ss-off-stays-idle", true, $"held revolver, idle for 1800 ticks with SS toggle off");
+                    PeteTimesSix.SimpleSidearms.SimpleSidearms.Settings.RangedCombatAutoSwitch = true;
+                    phase = 3;
+                    startTick = tick;
+                }
+                return;
+            }
+            if (phase == 3)
             {
                 KeepRaiderParked();
                 bool swapped = rangey.equipment.Primary?.def?.defName == "Gun_BoltActionRifle";

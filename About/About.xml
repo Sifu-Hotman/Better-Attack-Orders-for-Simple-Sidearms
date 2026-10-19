@@ -13,7 +13,7 @@ RimWorld mod that extends a pawn's target scanning to consider targets within re
 [h1]Features[/h1]
 [list]
 [*]Ranged attack orders consider every carried sidearm, not just the equipped weapon: if only a carried sidearm can reach the target, the order swaps to it and fires. No new buttons.
-[*]A drafted pawn standing guard with nothing in its equipped weapon's range draws a carried weapon that can reach a target, then engages.
+[*]A drafted pawn standing guard with nothing in its equipped weapon's range draws a carried weapon that can reach a target, then engages. Follows Simple Sidearms' [i]Use best ranged weapon[/i] toggle.
 [/list]
 
 [h1]Load order[/h1]

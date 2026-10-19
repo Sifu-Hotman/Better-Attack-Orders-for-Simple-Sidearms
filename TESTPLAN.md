@@ -10,7 +10,7 @@ mod's claim):
 ./test/run-bao-assert.sh bao2    # the idle auto-switch
 ```
 
-Results: `test/SaveData/test-results-bao*.json`. Latest green: **2026-10-17, 4/4** on
+Results: `test/SaveData/test-results-bao*.json`. Latest green: **2026-10-18, 4/4** (bao2 now four phases, SS toggle phase included). Previous: **2026-10-17, 4/4** on
 RimWorld 1.6.4871 rev600, Simple Sidearms 1.4.6.0 (Workshop build 2025-08-13), Harmony
 mod current. First run that day failed bao1-3 for a map reason: quicktest gen put ruins
 walls on the park row, `GenSight.LineOfSight` false, rescue declined; park cell is now
@@ -31,9 +31,10 @@ drafted-pawn + equipped-can't-hit failures - the initial version would have
 force-enabled orders for undrafted pawns ("X is not drafted" was vanilla's
 actual first refusal), caught by the harness.
 
-**bao2 (idle auto-switch)** - same save, three phases: toggle OFF + drafted +
+**bao2 (idle auto-switch)** - same save, four phases: toggle OFF + drafted +
 target at the rifle's edge → pawn must hold the revolver and stay idle for 1800
-ticks (negative control); toggle ON → pawn swaps to the rifle unprompted and
+ticks (negative control); toggle ON + SS's *Use best ranged weapon* OFF → still
+idle for 1800 ticks; SS toggle back ON → pawn swaps to the rifle unprompted and
 enters warmup on the target.
 
 Label annotation (added with the label patch): bao1 also asserts the rescued
