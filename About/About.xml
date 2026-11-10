@@ -8,7 +8,7 @@
     </supportedVersions>
     <description>[img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_BAO.png[/img]
 
-RimWorld mod that extends a pawn's target scanning to consider targets within reach of the sidearms it carries through [url=https://github.com/PeteTimesSix/SimpleSidearms]Simple Sidearms[/url].
+RimWorld mod that extends a pawn's target scanning to consider targets within reach of the sidearms it carries through [url=https://steamcommunity.com/sharedfiles/filedetails/?id=927155256]Simple Sidearms[/url].
 
 [h1]Features[/h1]
 [list]
@@ -23,9 +23,9 @@ Harmony, then Simple Sidearms, then this mod.
 [b]The CE + Simple Sidearms suite[/b] - a compatibility patch making Combat Extended and Simple Sidearms work together, plus the modules that build on it.
 [table]
 [tr][th]Module[/th][th]What it does[/th][/tr]
-[tr][td][url=https://github.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_Patch.png[/img][/url][/td][td]Core compatibility patch for Combat Extended and Simple Sidearms.[/td][/tr]
-[tr][td][url=https://github.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Loadouts][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_Loadouts.png[/img][/url][/td][td]Syncs loadouts between Combat Extended and Simple Sidearms.[/td][/tr]
-[tr][td][url=https://github.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Tactics][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_Tactics.png[/img][/url][/td][td]Sensible tweaks to nonsense pawn behavior when CE + SS run together.[/td][/tr]
+[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3835112661][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_Patch.png[/img][/url][/td][td]Core compatibility patch for Combat Extended and Simple Sidearms.[/td][/tr]
+[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3837111431][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_Loadouts.png[/img][/url][/td][td]Syncs loadouts between Combat Extended and Simple Sidearms.[/td][/tr]
+[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3837121355][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_Tactics.png[/img][/url][/td][td]Sensible tweaks to nonsense pawn behavior when CE + SS run together.[/td][/tr]
 [/table]
 
 [b]Expanded Materials patches[/b]
@@ -38,7 +38,7 @@ Harmony, then Simple Sidearms, then this mod.
 [b]Standalone[/b]
 [table]
 [tr][th]Mod[/th][th]What it does[/th][/tr]
-[tr][td][url=https://github.com/Sifu-Hotman/Pawns-Optimize-Weapon-Quality][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_POWQ.png[/img][/url][/td][td]Pawns upgrade their held guns when a higher-quality copy is available.[/td][/tr]
+[tr][td][url=https://steamcommunity.com/sharedfiles/filedetails/?id=3837156241][img]https://raw.githubusercontent.com/Sifu-Hotman/CombatExtended-SimpleSidearms-Compatibility-Patch/main/Media/Badge_POWQ.png[/img][/url][/td][td]Pawns upgrade their held guns when a higher-quality copy is available.[/td][/tr]
 [/table]
 
 [h1]FAQ[/h1]
