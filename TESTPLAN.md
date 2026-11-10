@@ -10,6 +10,10 @@ mod's claim):
 ./test/run-bao-assert.sh bao2    # the idle auto-switch
 ```
 
+Environment overrides for every `test/run-*.sh`: `RIMWORLD=/path/to/game-binary` runs against another
+game build, for example a 1.7 depot copy, and `SAVEDATA=/path/to/profile` uses another isolated profile
+directory. Defaults are the Steam install and the repo's `test/SaveData`.
+
 Results: `test/SaveData/test-results-bao*.json`. Latest green: **2026-10-18, 4/4** (bao2 now four phases, SS toggle phase included). Previous: **2026-10-17, 4/4** on
 RimWorld 1.6.4871 rev600, Simple Sidearms 1.4.6.0 (Workshop build 2025-08-13), Harmony
 mod current. First run that day failed bao1-3 for a map reason: quicktest gen put ruins
